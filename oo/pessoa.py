@@ -15,3 +15,8 @@ if __name__ == '__main__':
     print(id(luciano))
     for filhos in luciano.filhos:
         print(f'São filhos de {luciano.nome}: {filhos.nome}')
+
+    luciano.sobrenome = 'Ramalho'
+    print(luciano.__dict__)
+    del luciano.sobrenome
+    print(luciano.__dict__)
