@@ -19,11 +19,15 @@ class Pessoa:
     def nome_e_atributos_de_classe(cls):
         return f'{cls} - olhos {cls.olhos}'
 
+class Homem(Pessoa):
+    pass
+
+
 
 if __name__ == '__main__':
-    renzo = Pessoa(nome='Renzo')
-    luciano = Pessoa(renzo, nome='Luciano')
-    print(Pessoa.cumprimentar(luciano))
+    renzo = Homem(nome='Renzo')
+    luciano = Homem(renzo, nome='Luciano')
+    print(Homem.cumprimentar(luciano))
     print(id(luciano))
     for filhos in luciano.filhos:
         print(f'São filhos de {luciano.nome}: {filhos.nome}')
@@ -34,13 +38,13 @@ if __name__ == '__main__':
     print(luciano.__dict__)
     print(renzo.__dict__)
 
-    print(Pessoa.olhos)
+    print(Homem.olhos)
     print(luciano.olhos)
     print(renzo.olhos)
     luciano.olhos = 1
     print(luciano.__dict__)
     print(renzo.__dict__)
 
-    print(Pessoa.metodo_estatico(), luciano.metodo_estatico())
-    print(Pessoa.nome_e_atributos_de_classe(), luciano.nome_e_atributos_de_classe())
+    print(Homem.metodo_estatico(), luciano.metodo_estatico())
+    print(Homem.nome_e_atributos_de_classe(), luciano.nome_e_atributos_de_classe())
 
