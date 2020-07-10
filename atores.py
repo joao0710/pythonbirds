@@ -149,6 +149,7 @@ class Passaro(Ator):
         self.y = y_atual
 
 
+
 class PassaroAmarelo(Passaro):
     _caracter_ativo = 'A'
     _caracter_destruido = 'a'
